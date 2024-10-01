@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SR2</title>
+    <style>
+    /* Коментар */
+    *{
+        background-color: rgba(255, 255, 255, 0.351);
+    }
+    h1,h2,h3 {
+        text-align: center;
+    }
+
+    #someId {
+        color: blue;
+        font-family: 'Lexend Peta', sans-serif;
+        font-size: 1.3rem;
+    }
+    .someClass {
+        color: rgb(91, 254, 9);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 1.2rem;
+    }
+    body {
+        background-image: url('https://media1.thehungryjpeg.com/thumbs2/ori_4257044_g2p050f4abnrw9pdd5j0e64uo599bzfsma7uawr7_cute-flat-cartoon-raccoon-set-raccoons-various-poses-funny-animal-ca.jpg');
+        background-attachment: fixed;
+    }
+
+    /* Межі */
+    .bordered {
+        border: 2px solid black;
+        padding: 10px;
+    }
+
+    /* Поля */
+    .margin-example {
+        margin: 20px;
+    }
+
+    /* Padding */
+    .padding-example {
+        padding: 15px;
+        background-color: lightgrey;
+    }
+
+    /* Висота та ширина */
+    .size-example {
+        width: 200px;
+        height: 100px;
+        background-color: yellow;
+    }
+
+    /* Блочна модель */
+    .block-example {
+        display: block;
+        width: 300px;
+        height: 100px;
+        background-color: lightblue;
+    }
+
+    /* Іконки */
+    .icon-example {
+        font-size: 24px;
+        color: red;
+    }
+
+    /* Посилання */
+    a {
+        text-decoration: none;
+        color: green;
+    }
+
+    /* Списки */
+    ul {
+        list-style-type: square;
+    }
+
+    /* Таблиці */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Адаптивність */
+    @media (max-width: 600px) {
+        body {
+            background-color: lightyellow;
+        }
+    }
+
+    @keyframes example {
+        from {background-color: rgb(131, 171, 10); left: 0px; top: 0px;}
+        to {background-color: rgb(38, 16, 181);left: 200px; top: 200px;}
+    }
+
+    div {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(0, 255, 72);
+        animation-name: example;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    .centered-box {
+        background-color: rgba(255, 255, 255, 0.649);
+        padding: 20px;
+        border-radius: 20px;
+        width: 80%; 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+       }
+
+       .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black; 
+      }
+
+      .tooltip .tooltiptext {
+       visibility: hidden;
+       width: 120px;
+       background-color: black;
+       color: #fff;
+       text-align: center;
+       padding: 5px 0;
+       border-radius: 6px; 
+       position: absolute;
+       z-index: 1;
+}
+
+       .tooltip:hover .tooltiptext {
+       visibility: visible;
+}
+.button {
+  background-color: #4c54af; 
+  border: none;
+ color: white;
+  padding: 15px 32px;
+  text-align: center;
+ text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.button:hover {
+  background-color: #0f365b; 
+  color: white;
+}
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+.newspaper {
+  column-count: 3;
+  column-gap: 40px;
+  column-rule: 1px solid lightblue;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    </style>
+</head>
+<body>
+    <h1>Самостійна робота 2</h1>
+    <h2>Аралова Марія ІС-32</h2>
+
+    <h2>1.CSS</h2>
+    <h3>CSS Синтаксис</h3>
+    <p>Коментар: /* Це приклад коментаря */</p>
+    <p style="color:red">Цей текст має червоний колір</p>
+
+    <h3>CSS Селектори</h3>
+    <p>Селектори додано</p>
+    <p id="someId">Цей селектор id</p>
+    <p class="someClass">Цей селектор класу</p>
+
+    <h3>CSS Кольори (RGB, HEX, HSL)</h3>
+    <p style="color: rgb(143, 19, 19);">Звичайний колір</p>
+    <p style="border-color: rgb(143, 19, 19);">Колір меж</p>
+    <p style="color: rgba(143, 19, 19, 0.436);">Напівпрозорий колір</p>
+    <p style="color: #FF5733;">HEX колір</p>
+    <p style="color: hsl(120, 100%, 50%);">HSL колір</p>
+
+    <h3>CSS Фони</h3>
+    <p style="background-color: rgba(143, 19, 19, 0.436);">Колір фону</p>
+    <p style="background-image: url('https://example.com/image.jpg');">Фонове зображення</p>
+    <p style="background-size: cover;">Фон покриває весь блок</p>
+    <p style="background-repeat: no-repeat;">Фон без повторення</p>
+
+    <h3>CSS Межі</h3>
+    <p class="bordered">Цей блок з межею</p>
+    <p style="border-style: dotted;">Крапкова межа</p>
+    <p style="border-style: solid;">Суцільна межа</p>
+    <p style="border-style: double;">Подвійна межа</p>
+    <p style="border-style: dotted dashed solid double;">Змішана межа</p>
+
+    <h3>CSS Поля</h3>
+    <p class="margin-example">Цей блок з відступом</p>
+
+    <h3>CSS Padding - Внутрішній відступ</h3>
+    <p class="padding-example">Цей блок має внутрішній відступ</p>
+
+    <h3>CSS Висота, ширина і максимальна ширина</h3>
+    <p class="size-example">Цей блок має задані висоту і ширину</p>
+    <p style="max-width: 500px;">Максимальна ширина цього блоку — 500 пікселів</p>
+
+    <h3>CSS Блочна модель</h3>
+    <p class="block-example">Цей блок демонструє блочну модель</p>
+
+    <h3>CSS Іконки</h3>
+    <p class="icon-example">🦝 Ця іконка є частиною контенту</p>
+
+    <h3>CSS Посилання</h3>
+    <p><a href="https://example.com">Посилання без підкреслення</a></p>
+    <p><a href="https://example.com" style="color: red;">Червоне посилання</a></p>
+
+    <h3>CSS Списки</h3>
+    <ul>
+        <li>Пункт списку 1</li>
+        <li>Пункт списку 2</li>
+        <li>Пункт списку 3</li>
+    </ul>
+
+    <h3>CSS Розмір таблиці</h3>
+    <table>
+        <tr>
+            <th>Ім'я</th>
+            <th>Вік</th>
+        </tr>
+        <tr>
+            <td>Єнот 1</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Єнот 2</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <h3>Вирівнювання таблиці CSS</h3>
+    <table style="text-align: left;">
+        <tr>
+            <th>Ім'я</th>
+            <th>Вік</th>
+        </tr>
+        <tr>
+            <td>Єнот 3</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Єнот 4</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <h3>Стиль таблиці CSS</h3>
+    <table style="border: 2px solid green;">
+        <tr>
+            <th>Ім'я</th>
+            <th>Вік</th>
+        </tr>
+        <tr>
+            <td>Єнот 5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Єнот 6</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <h3>CSS адаптивна таблиця</h3>
+    <table style="width: 100%;">
+        <tr>
+            <th>Ім'я</th>
+            <th>Вік</th>
+        </tr>
+        <tr>
+            <td>Єнот 7</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Єнот 8</td>
+            <td>5</td>
+        </tr>
+    </table>
+
+
+    <h2>2.CSS продвинутий</h2>
+    <h3>Заокруглені кути</h3>
+    <p class="centered-box">Зокруглений прямокутник</p>
+
+    <h3>CSS анімації</h3>
+    <div></div>
+
+    <h3>Підказки CSS</h3>
+    <div class="tooltip">
+    <p>Текст підказки</p>
+    <p class="tooltiptext">Підказка</p>
+    </div>
+
+    <h3>Кнопки CSS</h3>
+    <p class="button">Приклад кнопки</p>
+
+    <h3>CSS Пагінація</h3>
+    <aside class="pagination">
+        <a href="#">«</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">»</a>
+    </aside>
+      
+
+    <h3>Створення стовпців CSS</h3>
+    <aside class="newspaper">
+        <p>Єноти — це ссавці з родини єнотових (Procyonidae), відомі своєю розумністю, здатністю до адаптації та цікавими поведінковими звичками. Найпоширеніший вид — це єнот-полоскун (Procyon lotor), названий так через звичку «мити» їжу у воді перед тим, як її з'їсти.
+
+            Основні характеристики єнотів:
+            Зовнішній вигляд: Єноти мають компактне тіло, пухнастий хвіст із кільцями, гострі вуха та темну «маску» навколо очей, що є їхньою характерною рисою. Їхня шерсть зазвичай сіро-коричнева, іноді з рудими або чорними відтінками.
+            
+            Розмір: Дорослий єнот зазвичай важить від 4 до 10 кг, а довжина тіла становить близько 40-70 см.
+            
+            Розумність: Єноти відомі своєю високою інтелектуальністю. Вони можуть вирішувати складні завдання і мають відмінну пам'ять. Відомо, що вони можуть згадувати рішення проблем до трьох років.
+            
+            Харчування: Єноти всеїдні, вони їдять рослинну та тваринну їжу. У їхньому раціоні можуть бути фрукти, ягоди, комахи, риба, пташині яйця, а також залишки їжі людини.
+            
+            Адаптивність: Єноти легко адаптуються до різних середовищ проживання, включаючи ліси, луки та міські території. Вони часто живуть поблизу людей, оскільки знаходять їжу в сміттєвих баках або годуються залишками, що їх залишають люди.</p>
+    </aside>
+
+    <h3>Випадаючі списки CSS</h3>
+<aside class="dropdown">
+    <span>Приклад випадаючого списку</span>
+    <aside class="dropdown-content">
+        <p>Елемент 1</p>
+        <p>Елемент 2</p>
+        <p>Елемент 3</p>
+    </aside>
+</aside>
+
+<h3>Кольорові ключові слова CSS</h3>
+<aside>
+    <p style="color: red;">Це текст червоного кольору (red)</p>
+    <p style="color: blue;">Це текст синього кольору (blue)</p>
+    <p style="color: green;">Це текст зеленого кольору (green)</p>
+</aside>
+
+<h3>Тіньові ефекти CSS</h3>
+<aside style="width: 150px; height: 150px; background-color: lightgrey; box-shadow: 10px 10px;">
+    Блок із тінню
+</aside>
+
+<h3>CSS Box Shadow</h3>
+<aside style="width: 150px; height: 150px; background-color: lightblue; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);">
+    Блок із ефектом box-shadow
+</aside>
+
+<h3>Текстові ефекти CSS</h3>
+<p style="font-size: 24px; text-shadow: 2px 2px 4px grey;">
+    Текст із тіньовим ефектом
+</p>
+<p style="font-size: 24px; letter-spacing: 5px;">
+    Текст із збільшеним міжлітерним інтервалом
+</p>
+
+</body>
+</html>
